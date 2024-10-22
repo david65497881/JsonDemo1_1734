@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Net;
 using static JsonDemo1_1734.Program;
 
 namespace JsonDemo1_1734
@@ -13,7 +14,8 @@ namespace JsonDemo1_1734
             var employeeInfo = new EmployeeInfo
             {
                 name = "王大為",
-                Signintoday = "8:30~9:16",//本日簽到
+                Signintoday = "【8:30~9:16】",//本日簽到
+                IpAddress = "172.16.12.144",
                 LastLogin = new DateTime(2024,10,22,10,41,51),//上次登入
                 Announcements = new List<Announcement> //公告
                 {
@@ -41,6 +43,7 @@ namespace JsonDemo1_1734
     public class EmployeeInfo
     {
         public string name { get; set; }
+        public string IpAddress { get; set; }
         public string Signintoday { get; set; }
         public DateTime LastLogin { get; set; }
         public List<Announcement> Announcements { get; set; }
