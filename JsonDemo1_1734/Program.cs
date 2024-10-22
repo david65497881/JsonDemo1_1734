@@ -52,10 +52,7 @@ namespace JsonDemo1_1734
 
 
 
-    public class SystemInfo
-    {
-        public string SystemName { get; set; }
-    }
+   
 
     public class Announcement
     {
